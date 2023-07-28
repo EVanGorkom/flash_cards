@@ -18,22 +18,22 @@ RSpec.describe Turn do
   end
 
   it "has a user's guess" do
-    card = Card.new("What is the capital of Alaska?", "Juneau", :Geography)
-    turn = Turn.new("Juneau", card)
+    card_1 = Card.new("What is the capital of Alaska?", "Juneau", :Geography)
+    turn = Turn.new("Juneau", card_1)
 
     expect(turn.guess).to eq("Juneau")
   end
 
   it "can tell if the guess was correct" do
-    card = Card.new("What is the capital of Alaska?", "Juneau", :Geography)
-    turn = Turn.new("Juneau", card)
+    card_1 = Card.new("What is the capital of Alaska?", "Juneau", :Geography)
+    turn = Turn.new("Juneau", card_1)
 
     expect(turn.correct?).to be true
   end
 
   it "can return feedback about a guess" do
-    card = Card.new("What is the capital of Alaska?", "Juneau", :Geography)
-    turn = Turn.new("Juneau", card)
+    card_1 = Card.new("What is the capital of Alaska?", "Juneau", :Geography)
+    turn = Turn.new("Juneau", card_1)
 
     expect(turn.feedback).to eq("Correct!")
   end
