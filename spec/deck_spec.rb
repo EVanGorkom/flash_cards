@@ -20,6 +20,8 @@ RSpec.describe Deck do
   end
 
   it "can list all the cards in a specific category" do
-    expect(@deck.cards_in_category).to 
+    expect(@deck.cards_in_category(:STEM)).to eq([@card_2, @card_3])
+    expect(@deck.cards_in_category(:Geography)).to eq([@card_1])
+    expect(@deck.cards_in_category("Pop Culture")).to eq([])
   end
 end
