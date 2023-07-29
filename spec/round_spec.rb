@@ -20,6 +20,6 @@ RSpec.describe Deck do
   it "has readable attributes" do
     expect(@round.deck).to eq(@deck)
     expect(@round.turns).to eq([])
-    expect(@round.current_card).to eq(card_1)
+    expect(@round.current_card).to eq(@card_1)
   end
 end
